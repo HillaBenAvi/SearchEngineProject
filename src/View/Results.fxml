@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="497.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.SearchEngineController">
+   <children>
+      <Text layoutX="48.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Searching Results" wrappingWidth="282.400390625">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <ListView fx:id="docsListView" layoutX="54.0" layoutY="230.0" prefHeight="47.0" prefWidth="251.0" />
+      <ListView fx:id="entitiesListView" layoutX="118.0" layoutY="325.0" prefHeight="70.0" prefWidth="127.0" />
+      <Text layoutX="160.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Queries:" />
+      <Text layoutX="151.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documents:" />
+      <Button fx:id="showEntitiesButton" layoutX="109.0" layoutY="292.0" mnemonicParsing="false" text="Show Document Entities" />
+      <TextField fx:id="resultsPathTF" layoutX="64.0" layoutY="425.0" prefHeight="25.0" prefWidth="197.0" />
+      <Text layoutX="132.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save the results at:" />
+      <Button fx:id="saveResultsButton" layoutX="162.0" layoutY="458.0" mnemonicParsing="false" onAction="#saveResults" text="Save" />
+      <Button fx:id="resultsPathBrowse" layoutX="274.0" layoutY="425.0" mnemonicParsing="false" onAction="#initResultsPath" text="Browse" />
+      <TableView fx:id="queriesTableView" layoutX="54.0" layoutY="110.0" prefHeight="97.0" prefWidth="251.0">
+        <columns>
+          <TableColumn fx:id="col1" prefWidth="127.0" text="Query number " />
+          <TableColumn fx:id="col2" minWidth="5.0" prefWidth="123.0" text="Number of docs" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
